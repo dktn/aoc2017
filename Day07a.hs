@@ -62,9 +62,6 @@ data Entry = Entry String Tree
 
 data EntryCh = EntryCh String (Maybe Bool) deriving (Show)
 
-dos :: String -> IO ()
-dos = undefined
-
 toMap :: [Entry] -> Map String Entry
 toMap = foldl insertToMap M.empty
   where

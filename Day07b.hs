@@ -45,9 +45,6 @@ data EntryCh = EntryCh String (Maybe Bool) deriving (Show)
 data Tree = Leaf String Int | Children String Int [Tree]
             deriving (Show)
 
-dos :: String -> IO ()
-dos = undefined
-
 toMap :: [Entry] -> Map String Entry
 toMap = foldl insertToMap M.empty
   where
